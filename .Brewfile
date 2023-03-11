@@ -28,3 +28,5 @@ brew "git"
 # Mac App Storeのアプリケーションを管理
 brew "asdf" #デフォルト
 brew "mas" #デフォルト
+brew "ripgrep" # telescopeのlive_grepで使用 文字列でファイル検索
+brew "ripgrep-all"
