@@ -34,13 +34,16 @@ return {
       require("pluginconfig/neo-tree")
     end,
   },
-    {
-      "nvim-treesitter/nvim-treesitter",
-      build = ":TSUpdate",
-      highlight = {
-          enable = true,
-      },
-      event = "VimEnter",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      { "JoosepAlviste/nvim-ts-context-commentstring" },
+    },
+    build = ":TSUpdate",
+    highlight = {
+        enable = true,
+    },
+    event = "VimEnter",
   },
   {
     'nvim-lua/telescope.nvim',
@@ -59,6 +62,13 @@ return {
     lazy = false,
     config = function()
       require("pluginconfig/tokyonight")
+    end,
+  },
+  {
+    'numToStr/Comment.nvim',
+    event = "VimEnter",
+    config = function()
+      require("pluginconfig/Comment")
     end,
   },
 }
