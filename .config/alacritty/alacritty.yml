@@ -3,7 +3,7 @@ window:
     x: 1
     y: 0
 
-  opacity: 0.99
+  opacity: 0.9
 
 scrolling:
   # consoleのlogを10000行まで保持
