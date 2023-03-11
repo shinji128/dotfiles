@@ -41,9 +41,45 @@ return {
     },
     build = ":TSUpdate",
     highlight = {
-        enable = true,
+      enable = true,
     },
     event = "VimEnter",
+  },
+  {
+    'neovim/nvim-lspconfig',
+    event = "VimEnter",
+  },
+  {
+    'williamboman/mason.nvim',
+    event = "VimEnter",
+    config = function()
+      require("pluginconfig/mason")
+    end,
+  },
+  {
+    'williamboman/mason-lspconfig',
+    event = "VimEnter",
+    config = function()
+      require("pluginconfig/mason-lspconfig")
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    event = "VimEnter",
+    dependencies = {
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/cmp-nvim-lsp-signature-help" },
+        { "hrsh7th/cmp-path" },
+        { "hrsh7th/cmp-buffer" },
+        { "hrsh7th/cmp-nvim-lua" },
+        { "saadparwaiz1/cmp_luasnip" },
+        { "hrsh7th/cmp-cmdline" },
+        { "petertriho/cmp-git" },
+        { 'onsails/lspkind-nvim' },
+    },
+    config = function()
+      require("pluginconfig/nvim-cmp")
+    end,
   },
   {
     'nvim-lua/telescope.nvim',
