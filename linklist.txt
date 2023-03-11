@@ -1,4 +1,4 @@
-ln -s dotfiles/.config/tmux/tmux.conf ~/tmux.conf
+ln -s dotfiles/.config/tmux/.tmux.conf ~/.tmux.conf
 ln -s dotfiles/.config/alacritty/alacritty.yml ~/alacritty.yml
 ln -s dotfiles/.config ~/.config
 ln -s dotfiles/.zshrc ~/.zshrc
