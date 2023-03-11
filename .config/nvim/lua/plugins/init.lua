@@ -34,4 +34,12 @@ return {
       require("pluginconfig/neo-tree")
     end,
   },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+      highlight = {
+          enable = true,
+      },
+      event = "VimEnter",
+  },
 }
