@@ -107,4 +107,9 @@ return {
       require("pluginconfig/Comment")
     end,
   },
+  {
+    'slim-template/vim-slim',
+    event = "FileType",
+    filetypes = { "slim" },
+  },
 }
