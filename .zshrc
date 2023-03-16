@@ -73,9 +73,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump web-search fzf zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git autojump web-search fzf zsh-syntax-highlighting zsh-autosuggestions docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
+
+fpath=(~/.zsh/completion $fpath)
 
 # User configuration
 
