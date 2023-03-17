@@ -45,18 +45,18 @@ colors:
 
 # Font
 font:
-  size: 11
+  size: 16
   normal:
-    family: 'HackGen35Nerd Console'
+    family: 'cica'
     style: Regular
   bold:
-    family: 'HackGen35Nerd Console'
+    family: 'cica'
     style: Bold
   italic:
-    family: 'HackGen35Nerd Console'
+    family: 'cica'
     style: Italic
   bold_italic:
-    family: 'HackGen35Nerd Console'
+    family: 'cica'
     style: Bold Itali
 
 env:
