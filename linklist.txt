@@ -4,3 +4,4 @@ ln -s dotfiles/.config ~/.config
 ln -s dotfiles/.zshrc ~/.zshrc
 ln -s dotfiles/.gitconfig ~/.gitconfig
 ln -s dotfiles/.zsh ~/.zsh
+ln -s dotfiles/.config/hammerspoon ~/.hammerspoon
