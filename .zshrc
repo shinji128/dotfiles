@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -138,6 +140,8 @@ alias vim="nvim"
 alias view="nvim -R"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias dc="docker compose"
+alias dce="docker compose exec"
 
 setopt auto_pushd # ディレクトリ移動が自動でpushd
 setopt pushd_ignore_dups # popdの重複削除
@@ -145,3 +149,6 @@ setopt auto_cd # cd無しで移動できる
 setopt hist_ignore_dups # historyの重複削除
 setopt share_history # 他のzshで履歴(history)を共有
 setopt inc_append_history # 即座に履歴を保存する
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
