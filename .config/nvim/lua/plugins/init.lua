@@ -112,4 +112,10 @@ return {
     event = "FileType",
     filetypes = { "slim" },
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("pluginconfig/indent-blankline")
+    end,
+  },
 }

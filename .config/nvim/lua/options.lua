@@ -5,4 +5,10 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
+vim.opt.smartindent = true
 vim.opt.autoread = true
+
+---indent-blankline
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
