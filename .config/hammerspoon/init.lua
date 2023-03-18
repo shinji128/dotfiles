@@ -8,3 +8,25 @@ hs.hotkey.bind({ "alt" }, "space", function()
     app:hide()
   end
 end)
+
+hs.hotkey.bind({ "alt" }, "s", function()
+  local appName = "Slack"
+  local app = hs.application.get(appName)
+
+  if app == nil or app:isHidden() then
+    hs.application.launchOrFocus(appName)
+  else
+    app:hide()
+  end
+end)
+
+hs.hotkey.bind({ "alt" }, "g", function()
+  local appName = "Google Chorme"
+  local app = hs.application.get(appName)
+
+  if app == nil or app:isHidden() then
+    hs.application.launchOrFocus(appName)
+  else
+    app:hide()
+  end
+end)
