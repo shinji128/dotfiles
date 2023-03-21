@@ -21,7 +21,7 @@ hs.hotkey.bind({ "alt" }, "s", function()
 end)
 
 hs.hotkey.bind({ "alt" }, "g", function()
-  local appName = "Google Chorme"
+  local appName = "Google Chrome"
   local app = hs.application.get(appName)
 
   if app == nil or app:isHidden() then
