@@ -118,4 +118,16 @@ return {
       require("pluginconfig/indent-blankline")
     end,
   },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    event = "VimEnter",
+    config = function()
+      require("pluginconfig/toggleterm")
+    end,
+  },
+  {
+    'github/copilot.vim',
+    event = "VimEnter",
+  },
 }
