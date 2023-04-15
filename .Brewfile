@@ -24,6 +24,7 @@ cask "karabiner-elements"
 # CLIアプリケーションの管理
 brew "yarn"
 brew "git"
+brew "lazygit"
 
 # Mac App Storeのアプリケーションを管理
 brew "asdf" #デフォルト
