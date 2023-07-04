@@ -14,6 +14,7 @@ require('telescope').setup {
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
+-- require('telescope').load_extension('cica_icons')
 
 local builtin = require('telescope.builtin')
 vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = 'Find files by Telescope' })
