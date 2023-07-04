@@ -45,7 +45,7 @@ colors:
 
 # Font
 font:
-  size: 16
+  size: 18
   normal:
     family: 'cica'
     style: Regular
