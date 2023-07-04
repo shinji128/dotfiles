@@ -134,6 +134,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/shims:$PATH"
 eval "$(pyenv init -)"
 
+# nodeのpath
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
 # vimのエイリアス
 alias vi="nvim"
 alias vim="nvim"
