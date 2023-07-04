@@ -37,13 +37,38 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
+      { "nvim-treesitter/nvim-treesitter-textobjects" },
+      { "nvim-treesitter/nvim-treesitter-context" },
+      { "windwp/nvim-ts-autotag" },
       { "JoosepAlviste/nvim-ts-context-commentstring" },
+      { "mrjones2014/nvim-ts-rainbow" },
     },
     build = ":TSUpdate",
     highlight = {
       enable = true,
     },
     event = "VimEnter",
+    config = function()
+      require("pluginconfig/nvim-treesitter")
+    end,
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("pluginconfig/null-ls")
+    end,
+  },
+  {
+    "jayp0521/mason-null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    opts = {
+      ensure_installed = nil,
+      automatic_installation = true,
+      automatic_setup = false,
+    },
   },
   {
     'neovim/nvim-lspconfig',
@@ -58,7 +83,8 @@ return {
   },
   {
     'williamboman/mason-lspconfig',
-    event = "VimEnter",
+    event = { "BufReadPre", "BufNewFile" },
+    build = ":MasonUpdate",
     config = function()
       require("pluginconfig/mason-lspconfig")
     end,
@@ -113,6 +139,11 @@ return {
     filetypes = { "slim" },
   },
   {
+    'tpope/vim-haml',
+    event = "FileType",
+    filetypes = { "haml" },
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require("pluginconfig/indent-blankline")
@@ -126,8 +157,26 @@ return {
       require("pluginconfig/toggleterm")
     end,
   },
-  {
-    'github/copilot.vim',
-    event = "VimEnter",
-  },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   event = "VimEnter",
+  --   config = function()
+  --     require("pluginconfig/null-ls")
+  --   end,
+  -- },
+  -- {
+  --   'github/copilot.vim',
+  --   event = "VimEnter",
+  -- },
+  -- {
+  --   "jay-babu/mason-null-ls.nvim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   dependencies = {
+  --     "williamboman/mason.nvim",
+  --     "jose-elias-alvarez/null-ls.nvim",
+  --   },
+  --   config = function()
+  --     require("pluginconfig/null-ls") -- require your null-ls config here (example below)
+  --   end,
+  -- }
 }

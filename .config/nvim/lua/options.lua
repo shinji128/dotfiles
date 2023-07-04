@@ -7,6 +7,7 @@ vim.opt.mouse = "a"
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.autoread = true
+vim.opt.termguicolors = true
 
 ---indent-blankline
 vim.opt.list = true
