@@ -98,14 +98,19 @@ return {
         { "hrsh7th/cmp-path" },
         { "hrsh7th/cmp-buffer" },
         { "hrsh7th/cmp-nvim-lua" },
-        { "saadparwaiz1/cmp_luasnip" },
         { "hrsh7th/cmp-cmdline" },
         { "petertriho/cmp-git" },
         { 'onsails/lspkind-nvim' },
+        { 'saadparwaiz1/cmp_luasnip' },
     },
     config = function()
       require("pluginconfig/nvim-cmp")
     end,
+  },
+  {
+    'L3MON4D3/LuaSnip',
+    event = "VimEnter",
+    build = "make install_jsregexp",
   },
   {
     'nvim-lua/telescope.nvim',
@@ -157,26 +162,15 @@ return {
       require("pluginconfig/toggleterm")
     end,
   },
-  -- {
-  --   "jose-elias-alvarez/null-ls.nvim",
-  --   event = "VimEnter",
-  --   config = function()
-  --     require("pluginconfig/null-ls")
-  --   end,
-  -- },
-  -- {
-  --   'github/copilot.vim',
-  --   event = "VimEnter",
-  -- },
-  -- {
-  --   "jay-babu/mason-null-ls.nvim",
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   dependencies = {
-  --     "williamboman/mason.nvim",
-  --     "jose-elias-alvarez/null-ls.nvim",
-  --   },
-  --   config = function()
-  --     require("pluginconfig/null-ls") -- require your null-ls config here (example below)
-  --   end,
-  -- }
+  {
+    'vim-denops/denops.vim',
+    event = "VimEnter",
+    dependencies = {
+      'tani/vim-glance',
+    },
+  },
+  {
+    'tani/vim-glance',
+    event = "VimEnter",
+  },
 }
