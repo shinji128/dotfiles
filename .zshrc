@@ -137,7 +137,7 @@ eval "$(pyenv init -)"
 # nodeのpath
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-# vimのエイリアス
+# エイリアス
 alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"

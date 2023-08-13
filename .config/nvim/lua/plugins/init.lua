@@ -174,24 +174,6 @@ return {
     'tani/vim-glance',
     event = "VimEnter",
   },
-  -- {
-  --   'zbirenbaum/copilot.lua',
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   build = ":Copilot auth",
-  --   opts = {
-  --     suggestion = { enabled = false },
-  --     panel = { enabled = false },
-  --   },
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   dependencies = {
-  --     "hrsh7th/nvim-cmp",
-  --     "copilot.lua",
-  --   },
-  --   config = true,
-  -- }
   {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
