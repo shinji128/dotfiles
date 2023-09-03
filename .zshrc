@@ -136,8 +136,6 @@ eval "$(pyenv init -)"
 
 # nodeのpath
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # エイリアス
 alias vi="nvim"
@@ -146,7 +144,7 @@ alias view="nvim -R"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dc="docker compose"
-alias dce="docker compose exec"
+alias du="docker compose down && docker compose up"
 
 setopt auto_pushd # ディレクトリ移動が自動でpushd
 setopt pushd_ignore_dups # popdの重複削除
@@ -161,3 +159,5 @@ setopt inc_append_history # 即座に履歴を保存する
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=~/.npm-global/bin:$PATH
+
