@@ -26,25 +26,7 @@ cmp.setup {
     ['<C-u>'] = cmp.mapping.scroll_docs( -4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-q>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        if cmp.get_selected_entry() then
-          cmp.confirm()
-        else
-          cmp.close()
-          fallback()
-        end
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    -- ["<Tab>"] = vim.schedule_wrap(function(fallback)
-    --   if cmp.visible() and has_words_before() then
-    --     cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-    --   else
-    --     fallback()
-    --   end
-    -- end),
+    ['<CR>'] = cmp.mapping.confirm(),
   }),
   window = {
     -- completion = cmp.config.window.bordered(),
