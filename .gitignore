@@ -17,6 +17,7 @@
 !/.config/lazygit/config.yml
 !/.config/ngrok
 !/.config/ngrok/ngrok.yml
+!/.config/karabiner/**
 !/.config/nvim
 !/.config/nvim/**
 !/.config/tmux
