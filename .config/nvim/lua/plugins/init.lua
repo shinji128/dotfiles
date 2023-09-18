@@ -196,4 +196,11 @@ return {
       require("pluginconfig/copilot")
     end,
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "InsertEnter",
+    config = function()
+      require("pluginconfig/lualine")
+    end,
+  },
 }
