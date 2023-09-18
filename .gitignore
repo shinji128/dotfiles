@@ -6,6 +6,7 @@
 !/linklist.txt
 !/setup.sh
 
+!/.config/
 !/.config/alacritty
 !/.config/alacritty/**
 /.config/fish/fish_variables

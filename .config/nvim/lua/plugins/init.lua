@@ -203,4 +203,11 @@ return {
       require("pluginconfig/lualine")
     end,
   },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("pluginconfig/noice")
+    end,
+  },
 }
