@@ -53,6 +53,13 @@ return {
     end,
   },
   {
+    'nvimdev/guard.nvim',
+    lazy = false,
+    config = function()
+      require('pluginconfig/guard')
+    end,
+  },
+  {
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
       require("pluginconfig/null-ls")
