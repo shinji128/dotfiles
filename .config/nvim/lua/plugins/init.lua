@@ -133,6 +133,13 @@ return {
     end,
   },
   {
+    'nvim-telescope/telescope-frecency.nvim',
+    config = function()
+      require("telescope").load_extension "frecency"
+    end,
+    dependencies = { "kkharji/sqlite.lua" },
+  },
+  {
     'folke/tokyonight.nvim',
     lazy = false,
     config = function()
@@ -211,3 +218,4 @@ return {
     end,
   },
 }
+-- opt = trueをつければsetupだけの設定ファイルを削除する

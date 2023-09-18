@@ -11,3 +11,8 @@ vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.format()<CR>')
 vim.keymap.set('n', 'gl', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+vim.keymap.set(
+  "n", "<leader>fr",
+  "<cmd>lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD' })<cr>",
+  { silent = true, desc = "Find file from history" }
+)
