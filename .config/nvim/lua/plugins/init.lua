@@ -120,9 +120,9 @@ return {
     event = "VimEnter",
     build = "make install_jsregexp",
   },
-  {
+    {
     'nvim-lua/telescope.nvim',
-    tag = '0.1.1',
+    tag = '0.1.4',
     event = "VimEnter",
     dependencies = {
         { 'nvim-lua/plenary.nvim' },
