@@ -80,6 +80,9 @@ return {
   {
     'neovim/nvim-lspconfig',
     event = "VimEnter",
+    config = function()
+      require("pluginconfig/nvim-lspconfig")
+    end,
   },
   {
     'williamboman/mason.nvim',
