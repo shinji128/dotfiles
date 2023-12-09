@@ -126,6 +126,8 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=100000
 
+export PATH="/usr/local/bin/aws:$PATH"
+
 # rubyのpath
 eval "$(rbenv init -)"
 
@@ -142,9 +144,11 @@ alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
 alias zshconfig="vim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dc="docker compose"
 alias du="docker compose down && docker compose up"
+# find / -name <ファイル名> #linuxのfindコマンド
 
 setopt auto_pushd # ディレクトリ移動が自動でpushd
 setopt pushd_ignore_dups # popdの重複削除
@@ -159,5 +163,3 @@ setopt inc_append_history # 即座に履歴を保存する
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=~/.npm-global/bin:$PATH
-
