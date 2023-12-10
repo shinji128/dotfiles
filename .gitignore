@@ -9,6 +9,8 @@
 !/.config/
 !/.config/alacritty
 !/.config/alacritty/**
+!/.config/wezterm
+!/.config/wezterm/**
 /.config/fish/fish_variables
 /.config/fish/secrets.fish
 !/.config/git
