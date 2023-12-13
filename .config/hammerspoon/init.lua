@@ -52,3 +52,14 @@ hs.hotkey.bind({ "alt" }, "f", function()
     app:hide()
   end
 end)
+
+hs.hotkey.bind({ "alt" }, "b", function()
+  local appName = "Arc.app"
+  local app = hs.application.get(appName)
+
+  if app == nil or app:isHidden() then
+    hs.application.launchOrFocus(appName)
+  else
+    app:hide()
+  end
+end)
