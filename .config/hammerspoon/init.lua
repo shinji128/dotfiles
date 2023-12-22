@@ -1,65 +1,24 @@
-hs.hotkey.bind({ "alt" }, "v", function()
-  local appName = "Alacritty"
-  local app = hs.application.get(appName)
+function toggleApp(appName)
+    local app = hs.application.get(appName)
 
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
+    if app == nil or app:isHidden() then
+        hs.application.launchOrFocus(appName)
+    else
+        app:hide()
+    end
+end
 
-hs.hotkey.bind({ "alt" }, "space", function()
-  local appName = "WezTerm"
-  local app = hs.application.get(appName)
+local appBindings = {
+    { key = "v", appName = "Alacritty" },
+    { key = "space", appName = "WezTerm" },
+    { key = "s", appName = "Slack" },
+    { key = "g", appName = "Clock" },
+    { key = "f", appName = "Notion" },
+    { key = "b", appName = "Arc.app" }
+}
 
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
-
-hs.hotkey.bind({ "alt" }, "s", function()
-  local appName = "Slack"
-  local app = hs.application.get(appName)
-
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
-
-hs.hotkey.bind({ "alt" }, "g", function()
-  local appName = "Clock"
-  local app = hs.application.get(appName)
-
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
-
-hs.hotkey.bind({ "alt" }, "f", function()
-  local appName = "Notion"
-  local app = hs.application.get(appName)
-
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
-
-hs.hotkey.bind({ "alt" }, "b", function()
-  local appName = "Arc.app"
-  local app = hs.application.get(appName)
-
-  if app == nil or app:isHidden() then
-    hs.application.launchOrFocus(appName)
-  else
-    app:hide()
-  end
-end)
+for _, binding in ipairs(appBindings) do
+    hs.hotkey.bind({ "alt" }, binding.key, function()
+        toggleApp(binding.appName)
+    end)
+end
