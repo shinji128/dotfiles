@@ -12,9 +12,10 @@ local appBinds = {
   { prefix = { 'alt' }, key = "v", appName = "Alacritty" },
   { prefix = { 'alt' }, key = "space", appName = "WezTerm" },
   { prefix = { 'alt' }, key = "s", appName = "Slack" },
-  { prefix = { 'alt' }, key = "g", appName = "Clock" },
-  { prefix = { 'alt' }, key = "f", appName = "Notion" },
-  { prefix = { 'alt' }, key = "b", appName = "Arc.app" }
+  { prefix = { 'alt' }, key = "t", appName = "Clock" },
+  { prefix = { 'alt' }, key = "n", appName = "Notion" },
+  { prefix = { 'alt' }, key = "a", appName = "Arc.app" },
+  { prefix = { 'alt' }, key = "p", appName = "Postman" }
 }
 
 for _, appBind in ipairs(appBinds) do
