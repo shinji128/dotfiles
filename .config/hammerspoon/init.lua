@@ -15,7 +15,8 @@ local appBinds = {
   { prefix = { 'alt' }, key = "t", appName = "Clock" },
   { prefix = { 'alt' }, key = "n", appName = "Notion" },
   { prefix = { 'alt' }, key = "a", appName = "Arc.app" },
-  { prefix = { 'alt' }, key = "p", appName = "Postman" }
+  { prefix = { 'alt' }, key = "p", appName = "Postman" },
+  { prefix = { 'alt' }, key = "d", appName = "Docker Desktop" }
 }
 
 for _, appBind in ipairs(appBinds) do
