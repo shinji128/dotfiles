@@ -139,6 +139,9 @@ eval "$(pyenv init -)"
 # nodeのpath
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
+# mysqlのpath
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+
 # エイリアス
 alias vi="nvim"
 alias vim="nvim"
