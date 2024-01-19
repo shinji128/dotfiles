@@ -51,6 +51,16 @@ style = "Italic"
 family = "cica"
 style = "Regular"
 
+[[keyboard.bindings]]
+action = "SelectNextTab"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "SelectPreviousTab"
+key = "Tab"
+mods = "Control|Shift"
+
 [scrolling]
 history = 10000
 

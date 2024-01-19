@@ -65,3 +65,7 @@ env:
 cursor:
   style:
     shape: Block
+
+key_bindings:
+  - {key: Tab, mods: Control, action: SelectNextTab}
+  - {key: Tab, mods: Control|Shift, action: SelectPreviousTab}
