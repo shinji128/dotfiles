@@ -141,6 +141,12 @@ eval "$(pyenv init -)"
 
 # mysqlのpath
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@5.7/lib/pkgconfig"
+
+# その他path
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
 
 # エイリアス
 alias vi="nvim"
@@ -159,11 +165,3 @@ setopt pushd_ignore_dups # popdの重複削除
 setopt auto_cd # cd無しで移動できる
 setopt hist_ignore_dups # historyの重複削除
 setopt share_history # 他のzshで履歴(history)を共有
-setopt inc_append_history # 即座に履歴を保存する
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
