@@ -158,6 +158,11 @@ alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dc="docker compose"
 alias du="docker compose down && docker compose up"
+
+# プロジェクトのエイリアス
+alias bot="cd ~/workspace/myope/myope-bot"
+alias favy="cd ~/workspace/favy"
+alias ote="cd ~/workspace/otetsutabi-next"
 # find / -name <ファイル名> #linuxのfindコマンド
 
 setopt auto_pushd # ディレクトリ移動が自動でpushd
