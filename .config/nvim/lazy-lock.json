@@ -36,7 +36,7 @@
   "nvim-window-picker": { "branch": "main", "commit": "41cfaa428577c53552200a404ae9b3a0b5719706" },
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
   "sqlite.lua": { "branch": "master", "commit": "6c00ab414dc1b69621b145908c582b747f24b46e" },
-  "telescope-frecency.nvim": { "branch": "master", "commit": "dde0b71e40a25d364f3de1ae59d532f42ec82e2d" },
+  "telescope-frecency.nvim": { "branch": "master", "commit": "9f4b0faae411667f3066d7235e2b67f55923dbe6" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "9ef21b2e6bb6ebeaf349a0781745549bbb870d27" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "toggleterm.nvim": { "branch": "main", "commit": "193786e0371e3286d3bc9aa0079da1cd41beaa62" },
