@@ -14,7 +14,7 @@
   "denops.vim": { "branch": "main", "commit": "b5dfcbc249a7559cbdc08ba1b7dc1cd92dec6d98" },
   "guard.nvim": { "branch": "main", "commit": "4ffdefe0f181ea7e449f60fe94ccc967220181c5" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
-  "lazy.nvim": { "branch": "main", "commit": "65887ea871d44822bff47504202b3643f29d614e" },
+  "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
   "lspkind-nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },
   "lualine.nvim": { "branch": "master", "commit": "b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67" },
   "mason-lspconfig": { "branch": "main", "commit": "2ba17cecfde8b8c7c7c287909a1e4de895223df6" },
