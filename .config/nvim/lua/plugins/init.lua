@@ -40,7 +40,7 @@ return {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
       { "nvim-treesitter/nvim-treesitter-context" },
       { "windwp/nvim-ts-autotag" },
-      { "JoosepAlviste/nvim-ts-context-commentstring" },
+      -- { "JoosepAlviste/nvim-ts-context-commentstring" },
       { "mrjones2014/nvim-ts-rainbow" },
     },
     build = ":TSUpdate",
@@ -52,52 +52,31 @@ return {
       require("pluginconfig/nvim-treesitter")
     end,
   },
+  -- ===========LSP==================
   {
-    'nvimdev/guard.nvim',
-    lazy = false,
+    "mfussenegger/nvim-lint",
+    event = "BufReadPre",
     config = function()
-      require('pluginconfig/guard')
-    end,
-  },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      require("pluginconfig/null-ls")
-    end,
-  },
-  {
-    "jayp0521/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-    },
-    opts = {
-      ensure_installed = nil,
-      automatic_installation = true,
-      automatic_setup = false,
-    },
-  },
-  {
-    'neovim/nvim-lspconfig',
-    event = "VimEnter",
-    config = function()
-      require("pluginconfig/nvim-lspconfig")
+      require("pluginconfig/nvim-lint")
     end,
   },
   {
     'williamboman/mason.nvim',
-    event = "VimEnter",
+    event = { "BufReadPre", "BufNewFile" },
+    build = ":MasonUpdate",
     config = function()
-      require("pluginconfig/mason")
+      require("mason").setup()
     end,
   },
   {
     'williamboman/mason-lspconfig',
-    event = { "BufReadPre", "BufNewFile" },
-    build = ":MasonUpdate",
+    after = 'mason.nvim',
     config = function()
       require("pluginconfig/mason-lspconfig")
     end,
+  },
+  {
+    'neovim/nvim-lspconfig'
   },
   {
     "hrsh7th/nvim-cmp",
@@ -123,9 +102,9 @@ return {
     event = "VimEnter",
     build = "make install_jsregexp",
   },
-    {
+  {
     'nvim-lua/telescope.nvim',
-    tag = '0.1.4',
+    branch = '0.1.x',
     event = "VimEnter",
     dependencies = {
         { 'nvim-lua/plenary.nvim' },
@@ -140,7 +119,6 @@ return {
     config = function()
       require("telescope").load_extension "frecency"
     end,
-    dependencies = { "kkharji/sqlite.lua" },
   },
   {
     'folke/tokyonight.nvim',
@@ -151,9 +129,9 @@ return {
   },
   {
     'numToStr/Comment.nvim',
-    event = "VimEnter",
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require("pluginconfig/Comment")
+      require("pluginconfig/comment")
     end,
   },
   {
@@ -215,10 +193,14 @@ return {
   },
   {
     "folke/noice.nvim",
-    event = "VeryLazy",
+    event = "VimEnter",
     config = function()
       require("pluginconfig/noice")
     end,
+    requires = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    }
   },
 }
 -- opt = trueをつければsetupだけの設定ファイルを削除する
