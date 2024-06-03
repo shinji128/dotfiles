@@ -47,7 +47,7 @@ return {
     highlight = {
       enable = true,
     },
-    event = "VimEnter",
+    event = "BufReadPre",
     config = function()
       require("pluginconfig/nvim-treesitter")
     end,
@@ -102,6 +102,7 @@ return {
     event = "VimEnter",
     build = "make install_jsregexp",
   },
+  -- ===========FuzzyFinder==================
   {
     'nvim-lua/telescope.nvim',
     branch = '0.1.x',
