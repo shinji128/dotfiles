@@ -67,6 +67,14 @@ history = 10000
 [window]
 opacity = 0.9
 
+[debug]
+highlight_damage = false
+log_level = "Warn"
+persistent_logging = false
+print_events = false
+render_timer = false
+renderer = "None"
+
 [window.padding]
 x = 1
 y = 0
