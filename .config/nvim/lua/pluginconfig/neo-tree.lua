@@ -1,21 +1,14 @@
 -- Unless you are still migrating, remove the deprecated commands from v1.x
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
--- If you want icons for diagnostic errors, you'll need to define them somewhere:
 vim.fn.sign_define("DiagnosticSignError",
-    -- { text = "󿙙 ", texthl = "DiagnosticSignError" })
     { text = "x ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn",
     { text = "! ", texthl = "DiagnosticSignWarn" })
--- { text = "󿔩 ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo",
     { text = "i ", texthl = "DiagnosticSignInfo" })
--- { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint",
     { text = "? ", texthl = "DiagnosticSignHint" })
--- { text = " ", texthl = "DiagnosticSignHint" })
--- NOTE: this is changed from v1.x, which used the old style of highlight groups
--- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
     close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
@@ -166,7 +159,7 @@ require("neo-tree").setup({
                 --".null-ls_*",
             },
         },
-        follow_current_file = false, -- This will find and focus the file in the active buffer every
+        follow_current_file = { enabled = true },
         -- time the current file is changed while the tree is open.
         group_empty_dirs = false, -- when true, empty folders will be grouped together
         hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
@@ -191,8 +184,7 @@ require("neo-tree").setup({
         }
     },
     buffers = {
-        follow_current_file = true, -- This will find and focus the file in the active buffer every
-        -- time the current file is changed while the tree is open.
+        follow_current_file = { enabled = true, },
         group_empty_dirs = true, -- when true, empty folders will be grouped together
         show_unloaded = true,
         window = {
