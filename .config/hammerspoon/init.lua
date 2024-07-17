@@ -10,7 +10,7 @@ end
 
 local appBinds = {
   { prefix = { 'alt' }, key = "space", appName = "Alacritty" },
-  { prefix = { 'alt' }, key = "v", appName = "WezTerm" },
+  { prefix = { 'alt' }, key = "v", appName = "Visual Studio Code" },
   { prefix = { 'alt' }, key = "s", appName = "Slack" },
   { prefix = { 'alt' }, key = "t", appName = "Clock" },
   { prefix = { 'alt' }, key = "n", appName = "Notion" },
