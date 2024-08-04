@@ -70,7 +70,11 @@ return {
     end,
   },
   {
-    'neovim/nvim-lspconfig'
+    'neovim/nvim-lspconfig',
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("pluginconfig/nvim-lspconfig")
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
