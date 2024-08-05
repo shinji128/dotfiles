@@ -1,4 +1,3 @@
-require("luarc")
 require("options")
 require("keymaps")
 
