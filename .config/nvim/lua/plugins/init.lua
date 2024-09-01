@@ -48,50 +48,81 @@ return {
     ft = "lua",
     opts = {},
   },
-  -- ===========LSP==================
-  {
-    "mfussenegger/nvim-lint",
-    event = "BufReadPre",
-    config = function()
-      require("pluginconfig/nvim-lint")
-    end,
-  },
-  {
-    'williamboman/mason.nvim',
-    event = { "BufReadPre", "BufNewFile" },
-    build = ":MasonUpdate",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-  {
-    'williamboman/mason-lspconfig',
-    after = 'mason.nvim',
-    config = function()
-      require("pluginconfig/mason-lspconfig")
-    end,
-  },
-  {
-    'neovim/nvim-lspconfig',
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      require("pluginconfig/nvim-lspconfig")
-    end,
-  },
+  -- ==============LSP==============
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   event = "BufReadPre",
+  --   config = function()
+  --     require("pluginconfig/nvim-lint")
+  --   end,
+  -- },
+  -- {
+  --   'williamboman/mason.nvim',
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   build = ":MasonUpdate",
+  --   config = function()
+  --     require("mason").setup()
+  --   end,
+  -- },
+  -- {
+  --   'williamboman/mason-lspconfig',
+  --   after = 'mason.nvim',
+  --   config = function()
+  --     require("pluginconfig/mason-lspconfig")
+  --   end,
+  -- },
+  -- {
+  --   'neovim/nvim-lspconfig',
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   config = function()
+  --     require("pluginconfig/nvim-lspconfig")
+  --   end,
+  -- },
+  -- {
+  --   'slim-template/vim-slim',
+  --   event = "FileType",
+  --   filetypes = { "slim" },
+  -- },
+  -- {
+  --   'tpope/vim-haml',
+  --   event = "FileType",
+  --   filetypes = { "haml" },
+  -- },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   config = function()
+  --     require("pluginconfig/indent-blankline")
+  --   end,
+  -- },
+
+  -- ==============コード補完==============
   {
     "hrsh7th/nvim-cmp",
-    event = "VimEnter",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-        { "hrsh7th/cmp-nvim-lsp" },
-        { "hrsh7th/cmp-nvim-lsp-signature-help" },
-        { "hrsh7th/cmp-path" },
-        { "hrsh7th/cmp-buffer" },
-        { "hrsh7th/cmp-nvim-lua" },
-        { "hrsh7th/cmp-cmdline" },
-        { "petertriho/cmp-git" },
-        { 'onsails/lspkind-nvim' },
-        { 'saadparwaiz1/cmp_luasnip' },
-        { 'zbirenbaum/copilot-cmp' },
+      "f3fora/cmp-spell",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-path",
+      "onsails/lspkind-nvim",
+      "petertriho/cmp-git",
+      "ray-x/cmp-treesitter",
+      "saadparwaiz1/cmp_luasnip",
+      "uga-rosa/cmp-dictionary",
+      "yutkat/cmp-mocword",
+      {
+        "zbirenbaum/copilot-cmp",
+        dependencies = { "copilot.lua" },
+        config = function()
+          require("copilot-cmp").setup()
+        end,
+      },
     },
     config = function()
       require("pluginconfig/nvim-cmp")
@@ -99,79 +130,8 @@ return {
   },
   {
     'L3MON4D3/LuaSnip',
-    event = "VimEnter",
+    event = "InsertEnter",
     build = "make install_jsregexp",
-  },
-  -- ===========FuzzyFinder==================
-  {
-    'nvim-lua/telescope.nvim',
-    branch = '0.1.x',
-    event = "VimEnter",
-    dependencies = {
-        { 'nvim-lua/plenary.nvim' },
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-    },
-    config = function()
-      require("pluginconfig/telescope")
-    end,
-  },
-  {
-    'nvim-telescope/telescope-frecency.nvim',
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("telescope").load_extension "frecency"
-    end,
-  },
-  {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    config = function()
-      require("pluginconfig/tokyonight")
-    end,
-  },
-  {
-    'numToStr/Comment.nvim',
-    config = function()
-      require("pluginconfig/comment")
-    end,
-  },
-  {
-    'slim-template/vim-slim',
-    event = "FileType",
-    filetypes = { "slim" },
-  },
-  {
-    'tpope/vim-haml',
-    event = "FileType",
-    filetypes = { "haml" },
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("pluginconfig/indent-blankline")
-    end,
-  },
-  {
-    'akinsho/toggleterm.nvim',
-    version = "*",
-    event = "VimEnter",
-    config = function()
-      require("pluginconfig/toggleterm")
-    end,
-  },
-  {
-    'vim-denops/denops.vim',
-    event = "VimEnter",
-    dependencies = {
-      'tani/vim-glance',
-    },
-  },
-  {
-    'tani/vim-glance',
-    event = "VimEnter",
   },
   {
     "zbirenbaum/copilot-cmp",
@@ -188,6 +148,38 @@ return {
       require("pluginconfig/copilot")
     end,
   },
+  -- ==============FuzzyFinder==============
+  {
+    'nvim-lua/telescope.nvim',
+    branch = '0.1.x',
+    event = "VimEnter",
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
+    config = function()
+      require("pluginconfig/telescope")
+    end,
+  },
+  {
+    'nvim-telescope/telescope-frecency.nvim',
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("telescope").load_extension "frecency"
+    end,
+  },
+
+  -- ==============Design==============
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    config = function()
+      require("pluginconfig/tokyonight")
+    end,
+  },
   {
     "nvim-lualine/lualine.nvim",
     event = "InsertEnter",
@@ -197,14 +189,37 @@ return {
   },
   {
     "folke/noice.nvim",
-    event = "VimEnter",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
     config = function()
       require("pluginconfig/noice")
     end,
-    requires = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    }
   },
+
+  -- ==============Other==============
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require("pluginconfig/comment")
+    end,
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    event = "VimEnter",
+    config = function()
+      require("pluginconfig/toggleterm")
+    end,
+  },
+  -- {
+  --   'vim-denops/denops.vim',
+  --   event = "VimEnter",
+  --   dependencies = {
+  --     'tani/vim-glance',
+  --   },
 }
 -- opt = trueをつければsetupだけの設定ファイルを削除する

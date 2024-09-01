@@ -40,24 +40,16 @@ cmp.setup {
   },
 
   sources = cmp.config.sources({
-    { name = "nvim_lsp", group_index = 2 },
-    { name = 'nvim_lsp_signature_help' },
-    { name = "path", group_index = 2 },
-    { name = 'buffer' },
-    { name = 'nvim_lua' },
-    { name = "luasnip", group_index = 2 },
-    { name = 'cmdline' },
-    { name = 'git' },
-    { name = "copilot", group_index = 2 },
+    { name = "copilot" },
+    { name = "nvim_lsp" },
+    { name = "path" },
+    { name = "buffer" },
+    { name = "nvim_lua" },
+    { name = "luasnip" },
+    { name = "cmdline" },
+    { name = "git" },
+    { name = "cmp_tabnine" },
+    { name = "spell" },
+    { name = "nvim_lsp_signature_help" },
   }),
-}
-
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-local lspconfig = require('lspconfig')
-require('mason-lspconfig').setup_handlers {
-  function(server_name)
-    lspconfig[server_name].setup { capabilities = capabilities }
-  end,
 }
