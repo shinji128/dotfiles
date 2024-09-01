@@ -5,10 +5,11 @@ return {
     event = "VimEnter",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
       {
         's1n7ax/nvim-window-picker',
+        name = "window-picker",
         version = '2.*',
         config = function()
           require 'window-picker'.setup({
@@ -34,17 +35,18 @@ return {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
       { "nvim-treesitter/nvim-treesitter-context" },
       { "windwp/nvim-ts-autotag" },
-      -- { "JoosepAlviste/nvim-ts-context-commentstring" },
       { "mrjones2014/nvim-ts-rainbow" },
     },
     build = ":TSUpdate",
-    highlight = {
-      enable = true,
-    },
     event = "BufReadPre",
     config = function()
       require("pluginconfig/nvim-treesitter")
     end,
+  },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {},
   },
   -- ===========LSP==================
   {
@@ -115,6 +117,10 @@ return {
   },
   {
     'nvim-telescope/telescope-frecency.nvim',
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
       require("telescope").load_extension "frecency"
     end,
