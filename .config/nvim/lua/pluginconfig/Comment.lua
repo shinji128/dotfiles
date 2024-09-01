@@ -13,7 +13,7 @@ require("Comment").setup({
     line = "gc",
     block = "gb",
   },
-  pre_hook = nil,  -- pre_hookを無効にする
+  pre_hook = nil,
   post_hook = nil,
 })
 
