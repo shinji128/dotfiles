@@ -23,4 +23,6 @@ vim.opt.swapfile = false
 
 -- vim.opt.lazyredraw = true -- マクロの再生時に画面の再描画を遅らせる
 -- vim.opt.gccons = 1000 -- ガベージコレクションを頻繁に行う
-vim.o.updatetime = 200 -- CursorHold イベントが早く発生し、プラグインの応答性が向上
+vim.opt.updatetime = 200 -- CursorHold イベントが早く発生し、プラグインの応答性が向上
+vim.opt.autoread = true -- ファイルが変更されたら自動で読み込む
+vim.opt.autoindent = true -- インデントを自動で行う
