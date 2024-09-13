@@ -21,6 +21,6 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
 
-vim.opt.lazyredraw = true -- マクロの再生時に画面の再描画を遅らせる
-vim.opt.gccons = 1000 -- ガベージコレクションを頻繁に行う
+-- vim.opt.lazyredraw = true -- マクロの再生時に画面の再描画を遅らせる
+-- vim.opt.gccons = 1000 -- ガベージコレクションを頻繁に行う
 vim.o.updatetime = 200 -- CursorHold イベントが早く発生し、プラグインの応答性が向上
