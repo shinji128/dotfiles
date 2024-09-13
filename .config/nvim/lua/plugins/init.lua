@@ -78,16 +78,16 @@ return {
   --     require("pluginconfig/nvim-lspconfig")
   --   end,
   -- },
-  -- {
-  --   'slim-template/vim-slim',
-  --   event = "FileType",
-  --   filetypes = { "slim" },
-  -- },
-  -- {
-  --   'tpope/vim-haml',
-  --   event = "FileType",
-  --   filetypes = { "haml" },
-  -- },
+  {
+    'slim-template/vim-slim',
+    event = "FileType",
+    ft = { "slim" },
+  },
+  {
+    'tpope/vim-haml',
+    event = "FileType",
+    filetypes = { "haml" },
+  },
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
   --   config = function()
