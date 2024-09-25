@@ -27,6 +27,8 @@
 !/.config/nvim/**
 !/.config/tmux
 !/.config/tmux/**
+!/.config/zellij
+!/.config/zellij/**
 !/.config/zsh
 !/.config/zsh/zshrc
 !/.github
