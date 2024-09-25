@@ -8,7 +8,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     pane {
-        bind "Ctrl p" { SwitchToMode "Normal"; }
+        bind "Ctrl i" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
@@ -72,10 +72,10 @@ keybinds clear-defaults=true {
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
     }
-    // entersearch {
-    //    bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
-    //    bind "Enter" { SwitchToMode "Search"; }
-    // }
+    entersearch {
+        bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
+        bind "Enter" { SwitchToMode "Search"; }
+    }
     renametab {
         bind "Ctrl c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
@@ -122,11 +122,11 @@ keybinds clear-defaults=true {
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
     }
-    shared_except "pane" "locked" {
-        bind "Ctrl p" { SwitchToMode "Pane"; }
+    shared_except "normal" "locked" {
+        bind "Enter" "Space" "Esc" { SwitchToMode "Normal"; }
     }
-    shared_except "resize" "locked" {
-        bind "Ctrl n" { SwitchToMode "Resize"; }
+    shared_except "pane" "locked" {
+        bind "Ctrl i" { SwitchToMode "Pane"; }
     }
     shared_except "scroll" "locked" {
         bind "Ctrl s" { SwitchToMode "Scroll"; }
@@ -135,11 +135,18 @@ keybinds clear-defaults=true {
         bind "Ctrl o" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Ctrl n" { SwitchToMode "Tab"; }
+        bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
+}
+
+plugins {
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider { path "strider"; }
+    compact-bar { path "compact-bar"; }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
@@ -193,7 +200,6 @@ keybinds clear-defaults=true {
 // Default: default
 //
 theme "tokyo-night"
-
 // The name of the default layout to load on startup
 // Default: "default"
 //
