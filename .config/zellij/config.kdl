@@ -8,7 +8,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     pane {
-        bind "Ctrl i" { SwitchToMode "Normal"; }
+        bind "Ctrl f" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
@@ -18,14 +18,14 @@ keybinds clear-defaults=true {
         bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
-        bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        // bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
-        bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
     tab {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
+        bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
@@ -126,7 +126,7 @@ keybinds clear-defaults=true {
         bind "Enter" "Space" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl i" { SwitchToMode "Pane"; }
+        bind "Ctrl f" { SwitchToMode "Pane"; }
     }
     shared_except "scroll" "locked" {
         bind "Ctrl s" { SwitchToMode "Scroll"; }
@@ -203,7 +203,7 @@ theme "tokyo-night"
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
