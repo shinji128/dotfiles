@@ -35,7 +35,6 @@ return {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
       { "nvim-treesitter/nvim-treesitter-context" },
       { "windwp/nvim-ts-autotag" },
-      { "mrjones2014/nvim-ts-rainbow" },
     },
     build = ":TSUpdate",
     event = "BufReadPre",
