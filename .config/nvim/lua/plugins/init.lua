@@ -55,28 +55,28 @@ return {
   --     require("pluginconfig/nvim-lint")
   --   end,
   -- },
-  -- {
-  --   'williamboman/mason.nvim',
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   build = ":MasonUpdate",
-  --   config = function()
-  --     require("mason").setup()
-  --   end,
-  -- },
-  -- {
-  --   'williamboman/mason-lspconfig',
-  --   after = 'mason.nvim',
-  --   config = function()
-  --     require("pluginconfig/mason-lspconfig")
-  --   end,
-  -- },
-  -- {
-  --   'neovim/nvim-lspconfig',
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   config = function()
-  --     require("pluginconfig/nvim-lspconfig")
-  --   end,
-  -- },
+  {
+    'williamboman/mason.nvim',
+    event = { "BufReadPre", "BufNewFile" },
+    build = ":MasonUpdate",
+    config = function()
+      require("mason").setup()
+    end,
+  },
+  {
+    'williamboman/mason-lspconfig',
+    after = 'mason.nvim',
+    config = function()
+      require("pluginconfig/mason-lspconfig")
+    end,
+  },
+  {
+    'neovim/nvim-lspconfig',
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("pluginconfig/nvim-lspconfig")
+    end,
+  },
   {
     'slim-template/vim-slim',
     event = "FileType",
