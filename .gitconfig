@@ -1,3 +1,11 @@
 [user]
-	name = miura
-	email = shinji65536@gmail.com
+  name = miura
+  email = shinji65536@gmail.com
+[rerere]
+  enabled = true
+[rebase]
+  autostash = true
+[fetch]
+  prune = true
+[core]
+  editor = nvim
