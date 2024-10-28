@@ -140,10 +140,10 @@ eval "$(pyenv init -)"
 # export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # mysqlのpath
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@5.7/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
 
 # その他path
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
