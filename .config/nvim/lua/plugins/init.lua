@@ -219,6 +219,15 @@ return {
       require("pluginconfig/scrollbar")
     end
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufReadPre",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = { hg_cmd = { '' } },
+  },
 
   -- ==============Other==============
   {
