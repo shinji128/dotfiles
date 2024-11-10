@@ -211,6 +211,14 @@ return {
       require("pluginconfig/hlchunk")
     end
   },
+  {
+    "petertriho/nvim-scrollbar",
+    event = "VimEnter",
+    -- dependencies = { { "kevinhwang91/nvim-hlslens" } },
+    config = function()
+      require("pluginconfig/scrollbar")
+    end
+  },
 
   -- ==============Other==============
   {
