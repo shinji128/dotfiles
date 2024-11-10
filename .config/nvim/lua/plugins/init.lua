@@ -228,6 +228,14 @@ return {
     },
     opts = { hg_cmd = { '' } },
   },
+  {
+    "folke/todo-comments.nvim",
+    event = "VimEnter",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("pluginconfig/todo-comments")
+    end,
+  },
 
   -- ==============Other==============
   {
