@@ -98,13 +98,6 @@ return {
     event = "FileType",
     filetypes = { "haml" },
   },
-  -- {
-  --   "lukas-reineke/indent-blankline.nvim",
-  --   config = function()
-  --     require("pluginconfig/indent-blankline")
-  --   end,
-  -- },
-
   -- ==============コード補完==============
   {
     "hrsh7th/nvim-cmp",
@@ -158,6 +151,7 @@ return {
       require("pluginconfig/copilot")
     end,
   },
+
   -- ==============FuzzyFinder==============
   {
     'nvim-lua/telescope.nvim',
@@ -208,6 +202,14 @@ return {
     config = function()
       require("pluginconfig/noice")
     end,
+  },
+  {
+    -- インデントデザイン
+    "shellRaining/hlchunk.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("pluginconfig/hlchunk")
+    end
   },
 
   -- ==============Other==============
