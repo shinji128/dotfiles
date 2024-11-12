@@ -67,6 +67,7 @@ return {
     },
   },
   {
+    -- Language Server のインストール
     'williamboman/mason.nvim',
     event = { "BufReadPre", "BufNewFile" },
     build = ":MasonUpdate",
@@ -178,6 +179,7 @@ return {
 
   -- ==============Design==============
   {
+    -- カラースキーム
     'folke/tokyonight.nvim',
     lazy = false,
     config = function()
@@ -185,6 +187,7 @@ return {
     end,
   },
   {
+    -- ステータスバーのデザイン
     "nvim-lualine/lualine.nvim",
     event = "InsertEnter",
     config = function()
@@ -192,6 +195,7 @@ return {
     end,
   },
   {
+    -- Cmdline, Searchのデザイン
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -212,6 +216,7 @@ return {
     end
   },
   {
+    -- スクロールバー
     "petertriho/nvim-scrollbar",
     event = "VimEnter",
     -- dependencies = { { "kevinhwang91/nvim-hlslens" } },
@@ -229,6 +234,7 @@ return {
     opts = { hg_cmd = { '' } },
   },
   {
+    -- アノーテーションのデザイン
     "folke/todo-comments.nvim",
     event = "VimEnter",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -239,12 +245,14 @@ return {
 
   -- ==============Other==============
   {
+    -- コメントアウトのショートカット
     'numToStr/Comment.nvim',
     config = function()
       require("pluginconfig/comment")
     end,
   },
   {
+    -- vimの中でターミナルを開く lazygitで使用
     'akinsho/toggleterm.nvim',
     version = "*",
     event = "VimEnter",
