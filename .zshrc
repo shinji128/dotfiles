@@ -156,6 +156,7 @@ alias zshconfig="vim ~/.zshrc"
 alias dotfile="vim ~/dotfiles"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias bup="brew update && brew upgrade"
 alias dc="docker compose"
 alias du="docker compose down && docker compose up"
 
@@ -163,6 +164,7 @@ alias du="docker compose down && docker compose up"
 alias bot="cd ~/workspace/myope/myope-bot"
 alias favy="cd ~/workspace/favy"
 alias ote="cd ~/workspace/otetsutabi-next"
+alias sre="cd ~/workspace/sre-study-rails-app"
 # find / -name <ファイル名> #linuxのfindコマンド
 
 setopt auto_pushd # ディレクトリ移動が自動でpushd
