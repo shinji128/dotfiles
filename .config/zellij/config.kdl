@@ -27,8 +27,8 @@ keybinds clear-defaults=true {
   tab {
     bind "Ctrl n" { SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-    bind "h" "Left" "Up" "k" { GoToPreviousTab; }
-    bind "l" "Right" "Down" "j" { GoToNextTab; }
+    bind "k" "Left" "Up" { GoToPreviousTab; }
+    bind "j" "Right" "Down" { GoToNextTab; }
     bind "c" { NewTab; SwitchToMode "Normal"; }
     bind "x" { CloseTab; SwitchToMode "Normal"; }
     bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
@@ -42,23 +42,25 @@ keybinds clear-defaults=true {
     bind "8" { GoToTab 8; SwitchToMode "Normal"; }
     bind "9" { GoToTab 9; SwitchToMode "Normal"; }
     bind "Tab" { ToggleTab; }
+    bind "h" { MoveTab "Left"; }
+    bind "l" { MoveTab "Right"; }
   }
-  scroll {
-    bind "Ctrl s" { SwitchToMode "Normal"; }
-    bind "e" { EditScrollback; SwitchToMode "Normal"; }
-    bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
-    bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
-    bind "j" "Down" { ScrollDown; }
-    bind "k" "Up" { ScrollUp; }
-    bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
-    bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
-    bind "d" { HalfPageScrollDown; }
-    bind "u" { HalfPageScrollUp; }
-    // uncomment this and adjust key if using copy_on_select=false
-    // bind "Alt c" { Copy; }
-  }
+  // scroll {
+  //   bind "Ctrl s" { SwitchToMode "Normal"; }
+  //   bind "e" { EditScrollback; SwitchToMode "Normal"; }
+  //   bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+  //   bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
+  //   bind "j" "Down" { ScrollDown; }
+  //   bind "k" "Up" { ScrollUp; }
+  //   bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+  //   bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
+  //   bind "d" { HalfPageScrollDown; }
+  //   bind "u" { HalfPageScrollUp; }
+  //   // uncomment this and adjust key if using copy_on_select=false
+  //   // bind "Alt c" { Copy; }
+  // }
   search {
-    bind "Ctrl s" { SwitchToMode "Normal"; }
+    // bind "Ctrl s" { SwitchToMode "Normal"; }
     bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
     bind "j" "Down" { ScrollDown; }
     bind "k" "Up" { ScrollUp; }
@@ -86,7 +88,7 @@ keybinds clear-defaults=true {
   }
   session {
     bind "Ctrl o" { SwitchToMode "Normal"; }
-    bind "Ctrl s" { SwitchToMode "Scroll"; }
+    // bind "Ctrl s" { SwitchToMode "Scroll"; }
     bind "d" { Detach; }
   }
   tmux {
@@ -128,9 +130,9 @@ keybinds clear-defaults=true {
   shared_except "pane" "locked" {
     bind "Ctrl f" { SwitchToMode "Pane"; }
   }
-  shared_except "scroll" "locked" {
-    bind "Ctrl s" { SwitchToMode "Scroll"; }
-  }
+  // shared_except "scroll" "locked" {
+  //   bind "Ctrl s" { SwitchToMode "Scroll"; }
+  // }
   shared_except "session" "locked" {
     bind "Ctrl o" { SwitchToMode "Session"; }
   }
