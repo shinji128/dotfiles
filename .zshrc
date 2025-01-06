@@ -157,6 +157,8 @@ alias dotfile="vim ~/dotfiles"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias bup="brew update && brew upgrade"
+alias gae="git commit --allow-empty -m"
+alias game="git commit --amend --no-edit"
 alias dc="docker compose"
 alias du="docker compose down && docker compose up"
 
