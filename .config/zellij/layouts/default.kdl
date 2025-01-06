@@ -1,0 +1,26 @@
+layout {
+  tab name="vim" focus=true {
+    pane
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  tab name="spec" {
+    pane
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  tab name="console" {
+    pane
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  tab name="other" {
+    pane
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+}
