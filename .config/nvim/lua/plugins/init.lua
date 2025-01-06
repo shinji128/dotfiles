@@ -260,6 +260,11 @@ return {
       require("pluginconfig/toggleterm")
     end,
   },
+  {
+    -- VSCodeのGitLens
+    'APZelos/blamer.nvim',
+    event = "VimEnter",
+  },
   -- {
   --   'vim-denops/denops.vim',
   --   event = "VimEnter",

@@ -1,5 +1,10 @@
 vim.g.mapleader = " "
 
+-- blamer.nvimの設定
+vim.g.blamer_enabled = true
+vim.g.blamer_date_format = '%Y/%m/%d'
+vim.g.blamer_template = '<committer> <committer-time> <summary>'
+
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { silent = true, desc = 'open new tab' })
