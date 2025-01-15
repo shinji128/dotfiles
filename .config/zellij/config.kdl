@@ -26,7 +26,7 @@ keybinds clear-defaults=true {
     bind "h" "Left" { MoveTab "Left"; }
     bind "l" "Right" { MoveTab "Right"; }
     bind "c" { NewTab; }
-    bind "x" { CloseTab; }
+    bind "Ctrl x" { CloseTab; }
   }
   scroll {
     bind "Ctrl j" { SwitchToMode "Normal"; }
