@@ -226,6 +226,12 @@ return {
       require("pluginconfig/copilot")
     end,
   },
+  {
+    -- 自動閉じ括弧 '"({
+    "windwp/nvim-autopairs",
+    event = "BufReadPost",
+    config = true,
+  },
 
   -- ==============FuzzyFinder==============
   {
