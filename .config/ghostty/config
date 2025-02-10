@@ -1,8 +1,7 @@
 font-family = cica
 font-size = 16
 
-# theme = RetroLegends
-theme = IC_Orange_PPL
+theme = Apple Classic
 background-opacity = 0.5
 background-blur = true
 
@@ -11,6 +10,11 @@ copy-on-select = clipboard
 adjust-cell-height = -10%
 window-colorspace = display-p3
 
-keybind = alt+l=new_split:right
-keybind = alt+j=new_split:down
 keybind = cmd+r=reload_config
+
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:top
+keybind = cmd+shift+l=new_split:right
+keybind = cmd+shift+j=new_split:down
