@@ -9,6 +9,8 @@
 !/.config/
 !/.config/alacritty
 !/.config/alacritty/**
+!/.config/ghostty
+!/.config/ghostty/**
 !/.config/wezterm
 !/.config/wezterm/**
 !/.config/hammerspoon
