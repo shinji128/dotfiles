@@ -1,9 +1,6 @@
 font-family = cica
 font-size = 16
-
 theme = Apple Classic
-background-opacity = 1
-background-blur = true
 
 copy-on-select = clipboard
 
@@ -11,7 +8,6 @@ adjust-cell-height = -10%
 window-colorspace = display-p3
 
 keybind = cmd+r=reload_config
-
 keybind = alt+l=goto_split:right
 keybind = alt+h=goto_split:left
 keybind = alt+j=goto_split:down
