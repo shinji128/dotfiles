@@ -2,7 +2,7 @@ font-family = cica
 font-size = 16
 
 theme = Apple Classic
-background-opacity = 0.5
+background-opacity = 1
 background-blur = true
 
 copy-on-select = clipboard
