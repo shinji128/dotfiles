@@ -1,6 +1,6 @@
 -- NOTE: https://github.com/jay-babu/mason-null-ls.nvim/blob/main/lua/mason-null-ls/mappings/filetype.lua
 require('mason-null-ls').setup({
-  ensure_installed = { 'golangci_lint' },
+  ensure_installed = { 'golangci_lint', 'gofmt' },
   handlers = {},
 })
 
@@ -18,7 +18,8 @@ null_ls.setup({
     -- null_ls.builtins.formatting.rubocop,
 
     -- Go golangci_lint
-    null_ls.builtins.diagnostics.golangci_lint
+    null_ls.builtins.diagnostics.golangci_lint,
+    null_ls.builtins.formatting.gofmt
   },
   debug = false,
 })
