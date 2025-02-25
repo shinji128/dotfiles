@@ -258,6 +258,15 @@ return {
 	},
 
 	-- ==============Design==============
+    -- ファイル名表示
+	{
+		"b0o/incline.nvim",
+		config = function()
+			require("pluginconfig/incline")
+		end,
+		-- Optional: Lazy load Incline
+		event = "VeryLazy",
+	},
 	{
 		-- カラースキーム
 		"folke/tokyonight.nvim",
