@@ -118,7 +118,7 @@ precmd () { vcs_info }
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PS1="%n@ %1~ %# "
 PROMPT='
-[%B%F{red}%n@%m%f%b:%F{green}%~%f]%F{cyan}$vcs_info_msg_0_%f
+[%F{red}%m%f%b:%F{green}%~%f]%F{cyan}$vcs_info_msg_0_%f
 %F{yellow}$%f '
 
 # historyの設定
